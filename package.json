@@ -1,0 +1,25 @@
+{
+  "name": "work-squad-roster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codequeen69/work-squad-roster.git"
+  },
+  "author": "codequeen69",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codequeen69/work-squad-roster/issues"
+  },
+  "homepage": "https://github.com/codequeen69/work-squad-roster#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
