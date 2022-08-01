@@ -1,6 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const memberArray = [];
+const Manager = require('./lib/Manager');
+const Engineer= require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 const promptManager =() => {
     return inquirer.prompt([
@@ -59,7 +62,8 @@ const promptManager =() => {
     ])
     .then(managerData => {
         const {name, id, email, officeNumber} = managerData;
-        const manager = new Manager(managerData);
+        //calling the constructor method
+        const manager = new Manager(name, id, email, officeNumber );
         memberArray.push(manager);
         addEmployee();
     })
@@ -123,16 +127,14 @@ const promptEngineer = () => {
     ])
     .then(engineerData => {
         const {name, id, email, github} = engineerData;
-        const engineer = new Engineer(engineerData);
+        const engineer = new Engineer(name, id, email, github);
         memberArray.push(engineer);
         addEmployee();
     })
 };
 
-const promptIntern = (internData) => {
-    if (!internData.info) {
-        internData.info = [];
-    }
+const promptIntern = () => {
+
     return inquirer.prompt([
         {
             type: 'input',
@@ -190,7 +192,7 @@ const promptIntern = (internData) => {
     ])
     .then(internData =>{
         const { name, id, email, school} = internData;
-        const intern = new Intern (internData);
+        const intern = new Intern (name, id, email, school);
         console.log(intern)
         memberArray.push(intern);
         addEmployee();
