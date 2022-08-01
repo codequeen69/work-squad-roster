@@ -58,7 +58,7 @@ const promptManager =() => {
         }
     ])
     .then(managerData => {
-        const {name, id, email, office} = managerData;
+        const {name, id, email, officeNumber} = managerData;
         const manager = new Manager(managerData);
         memberArray.push(manager);
         addEmployee();
