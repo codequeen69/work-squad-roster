@@ -7,3 +7,14 @@ test('creates an employee object', () => {
     expect(employee.id).toBe('123');
     expect(employee.email).toBe('email@email.com')
 });
+
+test('gets employee name value', () => {
+    const employee = new Employee('Camille')
+
+    expect(employee.getName()).toBe('Camille');
+})
+
+test('gets employee role', () => {
+    const employee = new Employee('Employee');
+    expect(employee.getRole()).toBe('Employee');
+})
