@@ -1,14 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const memberArray = [];
-<<<<<<< HEAD
 const Manager = require('./lib/Manager');
 const Engineer= require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-=======
-const generatePage = require('./page-template');
-const generateSite = require('./generate-site')
->>>>>>> feature/page-template
 
 const promptManager =() => {
     return inquirer.prompt([
