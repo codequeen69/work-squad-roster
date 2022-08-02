@@ -4,6 +4,8 @@ const memberArray = [];
 const Manager = require('./lib/Manager');
 const Engineer= require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generatePage = require('./page-template');
+const generateSite = require('./generate-site');
 
 const promptManager =() => {
     return inquirer.prompt([
@@ -205,7 +207,7 @@ const addEmployee = () => {
             type: 'list',
             name: 'member',
             message: 'Would you like to add another employee? If so, which type',
-            choices: ['Manager', 'Engineer', 'Intern', 'none']
+            choices: ['Engineer', 'Intern', 'none']
         }
     ])
         .then((answer) => {
@@ -214,12 +216,27 @@ const addEmployee = () => {
                 promptEngineer();
             } else if (answer.member === 'Intern') {
                 promptIntern();
-            } else if (answer.member === 'none') {
-
-                return writeToFile("./index.html",)
-                console.log("Page was generated!")
-            }
-        })
+            } else if(answer.member === 'none'){
+               return fs.writeFile("index.html", generatePage(memberArray), function(err){
+                    console.log("THis is working");
+                    if(err){
+                        console.log("ERROR")
+                    }
+                    else{
+                        console.log("index generated!")
+                    }
+                        } )
+                  }  
+    })
 };
+promptManager();
 
-promptManager()
+//  .then(data=>{
+//      return generatePage(memberArray);
+//  })
+//  .then(pageHTML => {
+//      return writeFile(pageHTML);
+//  })
+//  .catch(err =>{
+//      console.log(err)
+//});
