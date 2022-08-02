@@ -1,6 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const memberArray = [];
+const generatePage = require('./page-template');
+const generateSite = require('./generate-site')
 
 const promptManager =() => {
     return inquirer.prompt([
