@@ -195,7 +195,6 @@ const promptIntern = () => {
     .then(internData =>{
         const { name, id, email, school} = internData;
         const intern = new Intern (name, id, email, school);
-        console.log(intern)
         memberArray.push(intern);
         addEmployee();
     })
@@ -217,13 +216,12 @@ const addEmployee = () => {
             } else if (answer.member === 'Intern') {
                 promptIntern();
             } else if(answer.member === 'none'){
-               return fs.writeFile("index.html", generatePage(memberArray), function(err){
-                    console.log("THis is working");
+               return fs.writeFile("./dist/index.html", generatePage(memberArray), function(err){
                     if(err){
                         console.log("ERROR")
                     }
                     else{
-                        console.log("index generated!")
+                        console.log("The index.html file was generated!")
                     }
                         } )
                   }  
