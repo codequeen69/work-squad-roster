@@ -73,7 +73,7 @@ module.exports = data => {
        <title>Work Team Roster</title>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
-      <link rel="stylesheet" href="./src/style.css">
+      <link rel="stylesheet" href="style.css"/>
      </head>
      
      <body>
@@ -86,7 +86,7 @@ module.exports = data => {
      </div>
      </main>
      <footer>
-     <div class ="text-center text-white">Copyright © 2002, Rainbow Industries</div>
+     <div class ="text-center text-white">Copyright © 2022, Rainbow Industries</div>
      </footer>
      </body>
      </html>

@@ -221,20 +221,10 @@ const addEmployee = () => {
                         console.log("ERROR")
                     }
                     else{
-                        console.log("The index.html file was generated!")
+                        console.log("The HTML file was generated!")
                     }
                         } )
                   }  
     })
 };
 promptManager();
-
-//  .then(data=>{
-//      return generatePage(memberArray);
-//  })
-//  .then(pageHTML => {
-//      return writeFile(pageHTML);
-//  })
-//  .catch(err =>{
-//      console.log(err)
-//});
